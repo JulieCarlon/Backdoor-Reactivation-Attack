@@ -8,13 +8,13 @@ checkpoint_load:
 checkpoint_save:
 log:
 dataset_path: './data'
-dataset: 'cifar10'
+dataset: 'tiny'
 
 epochs: 50
 batch_size: 128
 num_workers: 4
 lr: 0.01
-lr_scheduler: CosineAnnealingLR
+lr_scheduler: ReduceLROnPlateau
 model: 'preactresnet18'
 
 client_optimizer: 'sgd'
@@ -26,12 +26,4 @@ random_seed: 0
 
 ratio: 0.05
 index: 
-
-lmd1: 1.0
-lmd2: 0.4
-lmd3: 0.4
-lmd4: 0.4
-norm_type: L2 
-warm_epochs: 5
-trigger_norm: 3.0
 
