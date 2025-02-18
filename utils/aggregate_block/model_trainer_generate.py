@@ -75,6 +75,9 @@ def generate_cls_model(
             partially_load_state_dict(net, net_from_cifar10.state_dict())
         else:
             net = PreActResNet18(num_classes=num_classes)
+    elif model_name == 'preactresnet18_CLP':
+        from models.preact_resnet_CLP import PreActResNet18
+        net = PreActResNet18(num_classes=num_classes)
     elif model_name == 'resnet34':
         net = resnet34(num_classes=num_classes, **kwargs)
     elif model_name == 'resnet50':
