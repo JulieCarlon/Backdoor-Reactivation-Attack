@@ -391,7 +391,7 @@ def analyze_features():
     fix_random(int(args.random_seed))
     sort_standard = args.sort_standard
     save_path_attack = "./record/" + args.result_file
-    save_path = f"/workspace/zhumingli/code/bdzoo2/defense/attackD/visualization/analy_backdoor_weight_acti_new/"
+    save_path = f"defense/attackD/visualization/analy_backdoor_weight_acti_new/"
 
     args.result_file
     args.result_file_defense
